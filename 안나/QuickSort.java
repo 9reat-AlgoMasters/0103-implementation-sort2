@@ -74,7 +74,7 @@ public class QuickSort {
 			}
 		
 		}
-		SortAsc(start,pivot);
+		SortAsc(start,pivot-1);
 		SortAsc(pivot+1,end);
 	}
 	static void SortDesc(int high, int low) {
@@ -109,7 +109,7 @@ public class QuickSort {
 			}
 		
 		}
-		SortDesc(start,pivot);
+		SortDesc(start,pivot-1);
 		SortDesc(pivot+1,end);
 	}
 }
