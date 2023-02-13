@@ -86,39 +86,6 @@ public class QuickSort {
         return pivotIdx;
     }
 
-    private static void mergeDesc(int[] arr, int start, int mid, int end) {
-        // 1.
-        int[] temp = new int[end - start + 1];
-        int idx = 0;
-
-        // 2-1.
-        int left = start;
-        // 2-2.
-        int right = mid + 1;
-
-        // 3.
-        while (left <= mid && right <= end) {
-            if (arr[left] >= arr[right]) {
-                temp[idx++] = arr[left++];
-            } else {
-                temp[idx++] = arr[right++];
-            }
-        }
-
-        // 4.
-        while (left <= mid) {
-            temp[idx++] = arr[left++];
-        }
-
-        // 5.
-        while (right <= end) {
-            temp[idx++] = arr[right++];
-        }
-
-        // 6.
-        System.arraycopy(temp, 0, arr, start, end - start + 1);
-    }
-
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
